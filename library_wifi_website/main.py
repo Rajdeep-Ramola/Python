@@ -19,7 +19,7 @@ class LibForm(FlaskForm):
     location = StringField("Library Location on Google Maps (URL)", validators=[DataRequired(), URL()])
     open = StringField("Opening Time e.g. 8AM", validators=[DataRequired()])
     close = StringField("Closing Time e.g. 5:30PM", validators=[DataRequired()])
-    wifi_rating = SelectField("Wi-Fi Strength Rating", choices=["✘", "📶️", "📶📶", "📶📶📶", "📶📶📶📶", "📶📶📶📶📶"], validators=[DataRequired()])
+    wifi_rating = SelectField("Wi-Fi Speed Rating", choices=["✘", "📶️", "📶📶", "📶📶📶", "📶📶📶📶", "📶📶📶📶📶"], validators=[DataRequired()])
     noise_level = SelectField("Noise levl Rating", choices=["✘", "🔊", "🔊🔊", "🔊🔊🔊", "🔊🔊🔊🔊", "🔊🔊🔊🔊🔊"], validators=[DataRequired()])
     seating_comfort = SelectField("Seating comfort rating", choices=[ "🪑", "🪑🪑", "🪑🪑🪑", "🪑🪑🪑🪑", "🪑🪑🪑🪑🪑"], validators=[DataRequired()])
     submit = SubmitField('Submit')
